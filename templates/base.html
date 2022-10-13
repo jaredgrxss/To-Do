@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Base File</title>
+</head>
+<body>
+    <!--
+        NAV BAR CONSTRUCTION
+    -->
+    <header>
+        <div class='container'>
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'homepage' %}">Home</a></li>
+                    <li><a href="{% url 'lists:show-list' %}">My To-Do's</a></li>
+                    <li><a href="{% url 'aboutpage'%}">About</a></li>
+                    <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
+                    {% else %}
+                    <li><a href="{% url 'homepage' %}">Home</a></li>
+                    <li><a href="{% url 'aboutpage' %}">About</a></li>
+                    <li><a href="{% url 'accounts:login' %}">Login</a></li>
+                    <li><a href="{% url 'accounts:signup' %}">SignUp</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class='main-content'>
+    {% block content %}{% endblock %}
+    </div>
+
+    <!--
+    <div class='footer'>
+        <p class="footer-content-right">
+            <a href="https://github.com/jaredgrxss" target="_blank"><img src="{% static 'ToDo/images/github.png' %}" class="icon-style" alt="Github icon"></a>
+            <a href="https://www.twitter.com/jaredgrxss" target="_blank"><img src="{% static 'ToDo/images/twitter.png' %}" class="icon-style" alt="Twitter icon"></a>
+            <a href="https://www.linkedin.com/in/jared-gross-657a81226" target="_blank"><img src="{% static 'ToDo/images/linkin.png' %}" class="icon-style" alt="LinkedIN icon"></a>
+
+        </p>
+    </div>
+    -->
+</body>
+<script src="{% static 'ToDo/js/master.js'%}"></script>
+</html>

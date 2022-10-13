@@ -1,0 +1,249 @@
+/*
+MAIN LOOK OF PAGE
+colors: #52b788
+*/
+body{
+    font-family: 'Montserrat',sans-serif;
+    background-color: #4361ee;
+    margin: 0;
+   
+}
+
+/*
+If container is ever needed
+*/
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/*
+NAV BAR OF THE PAGE
+*/
+header {
+    background: white;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #3a86ff;
+}
+
+nav a::before{
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: black;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+/*
+FOOTER
+*/
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+}
+
+.footer-content-right{
+    padding-right: 40px;
+    float: right;
+    margin-top: 15px
+}
+
+.icon-style{
+    height: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+/*
+SIGNUP AND LOGIN FORMS
+*/
+
+.login-signup-forms{
+    left: 50%;
+    top: 45%;
+    position: absolute;
+    transform: translate(-50%,-50%);  
+    width: 30%;
+}
+
+
+input[type=text]{
+    padding: 10px;
+    margin: 10px 0;
+    border: 0;
+    border-bottom: 1px solid black;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0,.6);
+    border-radius: 10px;
+    width: 100%;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+}
+
+input[type=email]{
+    padding: 10px;
+    margin: 10px 0;
+    border: 0;
+    border-bottom: 1px solid black;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0,.6);
+    border-radius: 10px;
+    width: 100%;
+    font-weight: 900;
+    text-align: center;
+    font-style: italic;
+}
+input[type=password]{
+    padding: 10px;
+    margin: 10px 0;
+    border: 0;
+    border-bottom: 1px solid black;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0,.6);
+    border-radius: 10px;
+    width: 100%;
+    font-weight: 900;
+    text-align: center;
+    font-style: italic;
+}
+
+.login-signup-button{
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-left: 25%;
+    font-weight: 900;
+    background-color: white;
+}
+
+form p{
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.login-signup-button:hover{
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-left: 25%;
+    font-weight: 900;
+    background-color: #f6bd60;
+}
+
+
+
+
+
+
+/*
+Trying out text affect
+*/
+.text_container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+  
+  .index-big-text {
+    font-size: 7rem;
+    text-shadow: 4px 4px 25px whitesmoke;
+    font-family: 'Boska', serif;
+    mix-blend-mode: screen;
+    letter-spacing: -1.2px;
+    text-transform: uppercase;
+    
+  }
+  
+  .slogan {
+    font-size: 1.2em;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 25px whitesmoke;
+    font-family: 'Boska', serif;
+    mix-blend-mode: screen;
+  }
+
+  .homepage-button{
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    margin: auto;
+    font-weight: 900;
+}
+
+
+
+/*
+BASIC STYLING OF SOME COMPONENTS ON MY WEBPAGE
+*/
+.center-items{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="text_container">
+    <h1 class='index-big-text' contenteditable="true">To-Do</h1>
+    <p class='slogan'>Editable in everyway...</p>
+    {% if user.is_authenticated %}
+    <a href="{% url 'accounts:logout' %}"><input type='submit' class='homepage-button' value="Logout"></a>
+    {% else %}
+    <a href="{% url 'accounts:signup' %}"><input type='submit' class='homepage-button' value="Get Started"></a>
+    {% endif %}
+</div>
+
+
+
+
+{% endblock %}
