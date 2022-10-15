@@ -26,6 +26,11 @@ class CreateList(LoginRequiredMixin,generic.CreateView):
     template_name = 'lists/create_list.html'
     fields = ('name','description')
     model = List
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.user = self.request.user
+        self.object.save()
+        return super().form_valid(form)
 
 
 class DeleteList(LoginRequiredMixin,generic.DeleteView):

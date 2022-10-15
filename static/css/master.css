@@ -4,7 +4,7 @@ colors: #52b788
 */
 body{
     font-family: 'Montserrat',sans-serif;
-    background-color: #4361ee;
+    background-color: #588157;
     margin: 0;
    
 }
@@ -56,7 +56,7 @@ nav a::before{
     content: '';
     display: block;
     height: 5px;
-    background-color: black;
+    background-color: #588157;
 
     position: absolute;
     top: 0;
@@ -116,7 +116,6 @@ input[type=text]{
     border-radius: 10px;
     width: 100%;
     font-weight: 900;
-    font-style: italic;
     text-align: center;
 }
 
@@ -130,7 +129,6 @@ input[type=email]{
     width: 100%;
     font-weight: 900;
     text-align: center;
-    font-style: italic;
 }
 input[type=password]{
     padding: 10px;
@@ -142,7 +140,6 @@ input[type=password]{
     width: 100%;
     font-weight: 900;
     text-align: center;
-    font-style: italic;
 }
 
 .login-signup-button{
@@ -225,12 +222,22 @@ Trying out text affect
     -webkit-appearance: none;
     padding: 10px;
     border: none;
-    font-weight: 600;
     border-radius: 5px;
     width: 100%;
-    display: block;
     margin: auto;
     font-weight: 900;
+}
+
+.homepage-button:hover{
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin: auto;
+    font-weight: 900;
+    background-color: #f6bd60;
 }
 
 
@@ -238,12 +245,46 @@ Trying out text affect
 /*
 BASIC STYLING OF SOME COMPONENTS ON MY WEBPAGE
 */
-.center-items{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+.center-content{
+   
+
+}
+
+.create-buttons{
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 150px;
+    font-weight: 900;
+    background-color: lightgreen;
+
+}
+
+
+.delete-buttons{
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 150px;
+    font-weight: 900;
+    background-color: lightcoral;
+
+}
+
+.update-buttons{
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    font-weight: 900;
+    background-color: lightyellow;
 
 }

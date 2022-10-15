@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class='center-items'>
+<div class='center-content'>
 <h1> Your To-Do's </h1>
 {% for list in current_lists %}
     <div class='list-boxes'>
         <a href="{{ list.get_absolute_url }}"><h2>{{list.name}}</h2></a>
         <h3>{{list.description}}</h3>
         <h4>Lastest Update: {{list.updated_at}}</h4>
-        <a href="{% url 'lists:update-list' pk=list.pk %}"><button>Update To-Do List</button></a>
-        <a href="{% url 'lists:delete-list' pk=list.pk%}"><button>Delete To-Do List</button></a>
+        <a href="{% url 'lists:update-list' pk=list.pk %}"><button class='update-buttons'>Update To-Do List</button></a>
+        <a href="{% url 'lists:delete-list' pk=list.pk%}"><button class='delete-buttons'>Delete To-Do List</button></a>
     </div>
 {% empty %}
     <h2>Currently, you do not have any To-Do's<h2>
-    <h3> Click below to add a To-Do! <h3>
-    <a href="{% url 'lists:create-list'%}"><button>Create To-Do List</button></a>
 {% endfor %}
+<h3> Click below to add a To-Do! <h3>
+    <a href="{% url 'lists:create-list'%}"><button class='create-buttons'>Create To-Do List</button></a>
 </div>
 
 {% endblock %}

@@ -20,7 +20,7 @@ class List(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("list-detail", kwargs={"pk": self.pk})
+        return reverse("lists:list-detail", kwargs={"pk": self.pk})
 
 
 
