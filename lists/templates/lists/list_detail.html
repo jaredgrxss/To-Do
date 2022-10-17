@@ -7,12 +7,12 @@
     {% for task in list.tasks.all %}
         <h4>{{task.name}} {{tasks.created_at}}</h4>
         <p>{{task.information}}</p>
-        <a href="#"><input type="submit" value='Done'></a> <a href="#"><input type="submit" value='Delete' class='delete-buttons'></a>
+        <a href="{% url 'tasks:delete-tasks' pk=list.pk %}"><input type="submit" value='Delete Item'></a> <a href="#"><input type="submit" value='Delete' class='delete-buttons'></a>
     {% empty %}
         <h4>Currently you have no tasks in this list! Add some below!</h4>
     {% endfor %}
     <h2>Completed Tasks: </h2>
-    <a href=""><input type="submit" value="Create Tasks" class='create-buttons'></a>
+    <a href="{% url 'tasks:create-tasks' %}"><input type="submit" value="Create Tasks" class='create-buttons'></a>
     
 </div>
 
