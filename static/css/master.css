@@ -2,10 +2,11 @@
 MAIN LOOK OF PAGE
 colors: #52b788
 */
+
 body{
     background: #161616;
     color: #fff;
-    font-family: 'MADE Bruno', sans-serif;
+    font-family: sans-serif;
 }
 
 /*
@@ -20,9 +21,7 @@ If container is ever needed
 /*
 NAV BAR OF THE PAGE
 */
-header {
-    
-}
+
 
 nav ul {
     margin: 0;
@@ -177,7 +176,7 @@ form p{
     margin: auto;
     margin-left: 25%;
     font-weight: 900;
-    background-color: #cddafd;
+    background-color: grey;
 }
 
 
@@ -242,69 +241,58 @@ Trying out effects for index page
 }
 
 
-@import url('http://fonts.cdnfonts.com/css/made-bruno');
+.card {
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 100px;
+	position: relative;
+	width: max(50vw, 350px - 3vw);
+	height: 65vmin;
+	background: #161616;
+	border: 1px solid white;
+	border-radius: 15px;
+	box-shadow: 15px 15px 37px -10px #7e7e7e;
+ 	overflow: hidden;
+}
+.card:hover {cursor: pointer;}
 
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
+.text-holder {
+	width: 60%;
+	margin: clamp(1rem, 6%, 3rem);
+}
+h1, p {
+	margin-bottom: clamp(.5rem, 2%, 1rem);
+	transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+}
+h1 {
+	font-size: clamp(1.5rem, 4vw, 2rem);
+}
+p {
+	font-size: clamp(0.8rem, 3vw, 1.5rem);
+}
+.toggled p, .toggled h1 {
+	transform: translateY(100px);
+	opacity: 0;
 }
 
-.section {
-  position: relative;
-  z-index: 50;
-  padding-block: 8rem;
+.image-holder {
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	transform: translateY(-50%);
+	width: 20%;
+	height: 90%;
+	background-image: url(https://assets.codepen.io/4787486/pattern4.jpg);
+	background-size: cover;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 3px 3px 10px 0 rgba(0 0 0 / 0.7);
+	transition: all .4s ease-in-out .075s;
 }
-
-.section_inner {
-  padding-inline: 4rem;
+.toggled .image-holder {
+	right: 0;
+	height: 100%;
+	width: 100%;
 }
-
-.section_title {
-  font-size: 4rem;
-}
-
-.section_description {
-  margin-top: 2.4rem;
-  font-size: 1rem;
-  line-height: 2;
-}
-
-.section_listWrapper {
-  position: relative;
-  width: 100%;
-  height: 202.66px;
-  margin-top: 2rem;
-}
-
-.section_list {
-  display: flex;
-  gap: 0 1.25rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.section_item {
-  width: 19rem;
-}
-
-.section_progress {
-  margin-top: 4rem;
-}
-
-.section_progressText {
-  margin-left: 1rem;
-  font-size: 2rem;
-}
-
-.section_progressLine {
-  width: 0;
-  height: 2px;
-  margin-top: 1rem;
-  background-color: #fff;
-}
-
 
 
 
@@ -330,7 +318,7 @@ BASIC STYLING OF SOME COMPONENTS ON MY WEBPAGE
     border-radius: 5px;
     width: 150px;
     font-weight: 900;
-    background-color: lightgreen;
+    background-color: white;
 
 }
 
@@ -344,7 +332,7 @@ BASIC STYLING OF SOME COMPONENTS ON MY WEBPAGE
     border-radius: 5px;
     width: 150px;
     font-weight: 900;
-    background-color: lightcoral;
+    background-color: grey;
 
 }
 
@@ -356,6 +344,6 @@ BASIC STYLING OF SOME COMPONENTS ON MY WEBPAGE
     border-radius: 5px;
     width: 150px;
     font-weight: 900;
-    background-color: lightyellow;
+    background-color: white;
 
 }
