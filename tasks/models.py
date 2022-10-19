@@ -12,7 +12,6 @@ class Task(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     list = models.ForeignKey('lists.List',related_name='tasks', on_delete=models.CASCADE)
 
-
     class Meta:
         ordering = ['-created_at']
 

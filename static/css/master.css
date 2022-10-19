@@ -237,7 +237,7 @@ Trying out effects for index page
     width: 100%;
     margin: auto;
     font-weight: 900;
-    background-color: #f6bd60;
+    background-color: grey;
 }
 
 
@@ -305,8 +305,17 @@ p {
 BASIC STYLING OF SOME COMPONENTS ON MY WEBPAGE
 */
 .center-content{
-   
-
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 50px;
+	position: relative;
+	width: max(50vw, 350px - 3vw);
+	background: #161616;
+	border: 1px solid white;
+	border-radius: 15px;
+	box-shadow: 15px 15px 37px -10px #7e7e7e;
+    padding: 20px;
+    text-align: center;
 }
 
 .create-buttons{
@@ -346,4 +355,16 @@ BASIC STYLING OF SOME COMPONENTS ON MY WEBPAGE
     font-weight: 900;
     background-color: white;
 
+}
+
+.todo-names{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.todo-names:hover{
+    color: grey;
+    text-decoration: none;
+    text-transform: uppercase;
 }

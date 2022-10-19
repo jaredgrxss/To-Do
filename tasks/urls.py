@@ -4,6 +4,6 @@ from . import views
 app_name = 'tasks'
 
 urlpatterns = [
-    path('delete/task/',views.DeleteTask.as_view(),name='delete-task'),
-    path('create/task/',views.CreateTask.as_view(),name='create-task')
+    path('delete/<int:pk>',views.DeleteTask.as_view(),name='delete-task'),
+    path('create/<int:pk>',views.CreateTask.as_view(),name='create-task')
 ]
