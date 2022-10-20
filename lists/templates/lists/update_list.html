@@ -2,10 +2,12 @@
 
 {% block content %}
 
+<div class='center-content'>
 <form method='post'>
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" class='create-buttons' value="Save List!">
 </form>
+</div
 
 {% endblock %}

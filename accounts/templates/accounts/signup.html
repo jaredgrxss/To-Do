@@ -2,14 +2,10 @@
 {% load static %}
 {% block content %}
 
-
 <form class='login-signup-forms' method='post'>
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" class='login-signup-button' value="Sign Up!">
 </form>
-
-
-
 
 {% endblock %}

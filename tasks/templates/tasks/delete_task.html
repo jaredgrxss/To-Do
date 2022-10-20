@@ -2,7 +2,14 @@
 
 {% block content %}
 
-
+<div class='center-content'>
+    <h1>Are you sure you want to delete the task{{task.name}}?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete Task" class='delete-buttons'>
+    </form>
+        <a href="{% url 'lists:list-detail' pk=task.list.pk %}"><button style='margin-top: 10px' class='update-buttons'>Cancel</button></a>
+</div>
 
 {% endblock content %}
 

@@ -10,14 +10,13 @@ from lists.models import List
 
 
 class CreateTask(LoginRequiredMixin,generic.CreateView):
-    fields = ('name','information')
+    fields = ('name','list')
     model = Task
     template_name = 'tasks/create_task.html'
 
+
     def form_valid(self, form):
-        thelist = get_object_or_404(List)
         self.object = form.save(commit=False)
-        self.object.list = self.kwargs['list']
         self.object.done = False
         self.object.save()
         return super().form_valid(form)
@@ -31,6 +30,6 @@ class DeleteTask(LoginRequiredMixin,generic.DeleteView):
     model = Task
     template_name = 'tasks/delete_task.html'
     def get_success_url(self):
-        list_id = self.kwargs['pk']
-        return reverse_lazy("lists:show-list")
+        list_id = self.object.list.pk
+        return reverse_lazy("lists:list-detail",kwargs={'pk':list_id})
 

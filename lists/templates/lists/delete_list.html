@@ -2,11 +2,11 @@
 
 {% block content %}
 <div class='center-content'>
-<h1>Are you sure you want to delete the list{{list.name}}?</h1>
+<h1>Are you sure you want to delete the list: '{{list.name}}'?</h1>
 <form method="post">
     {% csrf_token %}
     <input type="submit" value="Delete List" class='delete-buttons'>
 </form>
-    <a href="{% url 'lists:list-detail' pk=list.pk %}"><button style='margin-top: 10px' class='update-buttons'>Cancel</button></a>
+    <a href="{% url 'lists:show-list' %}"><button style='margin-top: 10px' class='update-buttons'>Cancel</button></a>
 </div>
 {% endblock %}

@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class='center-content'>
 <h1>Create your task by filling in the information!</h1>
 <form action="{% url 'tasks:create-task' %}" method="post">
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" value='Create Task!' class='create-buttons'>
 </form>
+</div>
 
 {% endblock content %}

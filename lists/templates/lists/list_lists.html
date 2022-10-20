@@ -5,8 +5,8 @@
 <h1> Your To-Do's </h1>
 {% for list in current_lists %}
     <div class='list-boxes'>
-        <a class='todo-names' href="{{ list.get_absolute_url }}"><h2>{{list.name}}</h2></a>
-        <h3 style='font-style: italic;'>{{list.description}}</h3>
+        <a class='todo-names' href="{{ list.get_absolute_url }}"><h1>{{list.name}}</h1></a>
+        <h3 style='font-style: italic;'>Description: {{list.description}}</h3>
         <h4>Lastest Update: {{list.updated_at}}</h4>
         <a href="{% url 'lists:update-list' pk=list.pk %}"><button class='update-buttons'>Update To-Do List</button></a>
         <a href="{% url 'lists:delete-list' pk=list.pk%}"><button class='delete-buttons'>Delete To-Do List</button></a>

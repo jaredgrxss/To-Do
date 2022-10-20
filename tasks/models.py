@@ -5,8 +5,7 @@ from django.urls import reverse
 
 
 class Task(models.Model):
-    name = models.CharField(max_length=200)
-    information = models.TextField()
+    name = models.CharField(max_length=256)
     done = models.BooleanField(False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
