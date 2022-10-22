@@ -5,6 +5,7 @@ from psutil import users
 from lists.models import List
 from django.contrib.auth import get_user_model
 from django.urls import reverse_lazy
+from lists.forms import CreateNewList
 # Create your views here.
 User = get_user_model()
 class ListLists(LoginRequiredMixin,generic.ListView):
@@ -24,8 +25,7 @@ class DetailList(LoginRequiredMixin,generic.DetailView):
 
 class CreateList(LoginRequiredMixin,generic.CreateView):
     template_name = 'lists/create_list.html'
-    fields = ('name','description')
-    model = List
+    form_class = CreateNewList
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.user = self.request.user
@@ -40,8 +40,8 @@ class DeleteList(LoginRequiredMixin,generic.DeleteView):
 
 class UpdateList(LoginRequiredMixin,generic.UpdateView):
     template_name = 'lists/update_list.html'
-    fields = ('name','description')
     model = List
+    form_class = CreateNewList
        
 
 

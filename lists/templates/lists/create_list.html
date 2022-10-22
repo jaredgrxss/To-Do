@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class='center-content'>
-    <h1>Fill in the information below!</h1>
-    <form action="{% url 'lists:create-list' %}" method="POST">
+    <h1>Create your list!</h1>
+    <form class='create-list-form' action="{% url 'lists:create-list' %}" method="POST">
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit" value="Create List!" class='create-buttons'>

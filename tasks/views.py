@@ -6,12 +6,17 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404
 from lists.models import List
+from . import forms
 # Create your views here.
 
 
 class CreateTask(LoginRequiredMixin,generic.CreateView):
+    '''
     fields = ('name','list')
     model = Task
+    
+    '''
+    form_class = forms.CreateNewTask
     template_name = 'tasks/create_task.html'
 
 

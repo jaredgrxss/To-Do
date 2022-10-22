@@ -18,28 +18,28 @@ class UserCreateForm(UserCreationForm):
 
     username = forms.CharField(widget=forms.TextInput(
         attrs={
-            'class':'input',
+            'class':'login-user',
             'type':'text',
             'placeholder':'Enter a username!',
         }
     ))
     email = forms.CharField(widget=forms.TextInput(
         attrs={
-            'class':'input',
+            'class':'login-email',
             'type':'email',
             'placeholder':'Enter your email!',
         }
     ))
     password1 = forms.CharField(widget=forms.TextInput(
         attrs={
-            'class':'input',
+            'class':'login-pass',
             'type':'password',
             'placeholder':'Enter a password!',
         }
     ))
     password2 = forms.CharField(widget=forms.TextInput(
         attrs={
-            'class':'input',
+            'class':'login-pass',
             'type':'password',
             'placeholder':'Re-enter your password!',
         }
@@ -56,7 +56,7 @@ class UserLoginForm(AuthenticationForm):
     
     username = UsernameField(widget=forms.TextInput(
         attrs= {
-            'class':'form-control',
+            'class':'login-user',
             'placeholder':'Enter your username',
             'id':'hello'
             }
@@ -65,7 +65,7 @@ class UserLoginForm(AuthenticationForm):
 
     password = forms.CharField(widget=forms.PasswordInput(
         attrs = {
-            'class':'form-control',
+            'class':'login-pass',
             'placeholder':'Enter your password',
             'id':'',
         }

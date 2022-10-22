@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class='center-content'>
-<h1>Create your task by filling in the information!</h1>
-<form action="{% url 'tasks:create-task' %}" method="post">
+<h1>Give your task a name!</h1>
+<form action="{% url 'tasks:create-task' %}" method="post" class='create-task-form"'>
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" value='Create Task!' class='create-buttons'>

@@ -7,7 +7,7 @@ User = get_user_model()
 
 class List(models.Model):
     name = models.CharField(max_length=100,unique=True)
-    description = models.TextField(blank=True)
+    description = models.TextField(max_length=100,blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User,related_name='lists',on_delete=models.CASCADE)

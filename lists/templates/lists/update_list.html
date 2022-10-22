@@ -3,7 +3,8 @@
 {% block content %}
 
 <div class='center-content'>
-<form method='post'>
+    <h1>Update your list below!<h1>
+<form method='post' class='create-list-form'>
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" class='create-buttons' value="Save List!">
