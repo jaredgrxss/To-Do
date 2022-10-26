@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class='center-content'>
-    <h1>Create your list!</h1>
+    <h1>Create your To-Do!</h1>
     <form class='create-list-form' action="{% url 'lists:create-list' %}" method="POST">
         {% csrf_token %}
         {{form.as_p}}

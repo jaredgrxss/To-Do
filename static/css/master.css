@@ -93,93 +93,9 @@ FOOTER
 }
 
 
-
 /*
-SIGNUP AND LOGIN FORMS
+Basic logic for styling our login/signup forms
 */
-/*
-.login-signup-forms{
-    left: 50%;
-    top: 45%;
-    position: absolute;
-    transform: translate(-50%,-50%);  
-    width: 30%;
-}
-
-
-input[type=text]{
-    padding: 10px;
-    margin: 10px 0;
-    border: 0;
-    border-bottom: 1px solid black;
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0,.6);
-    border-radius: 10px;
-    width: 100%;
-    font-weight: 900;
-    text-align: center;
-}
-
-input[type=email]{
-    padding: 10px;
-    margin: 10px 0;
-    border: 0;
-    border-bottom: 1px solid black;
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0,.6);
-    border-radius: 10px;
-    width: 100%;
-    font-weight: 900;
-    text-align: center;
-}
-input[type=password]{
-    padding: 10px;
-    margin: 10px 0;
-    border: 0;
-    border-bottom: 1px solid black;
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0,.6);
-    border-radius: 10px;
-    width: 100%;
-    font-weight: 900;
-    text-align: center;
-}
-
-.login-signup-button{
-    appearance: none;
-    -webkit-appearance: none;
-    padding: 10px;
-    border: none;
-    font-weight: 600;
-    border-radius: 5px;
-    width: 50%;
-    display: block;
-    margin: auto;
-    margin-left: 25%;
-    font-weight: 900;
-    background-color: white;
-}
-
-form p{
-    text-align: center;
-    color: white;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.login-signup-button:hover{
-    appearance: none;
-    -webkit-appearance: none;
-    padding: 10px;
-    border: none;
-    font-weight: 600;
-    border-radius: 5px;
-    width: 50%;
-    display: block;
-    margin: auto;
-    margin-left: 25%;
-    font-weight: 900;
-    background-color: grey;
-}
-*/
-
 .login-signup-forms{
     left: 50%;
     top: 45%;
@@ -196,9 +112,10 @@ form p{
     border-bottom: 1px solid black;
     box-shadow: 0 0 15px 4px rgba(0,0,0,0,.6);
     border-radius: 10px;
-    width: 100%;
+    width: 60%;
     font-weight: 900;
     text-align: center;
+    font-size: 20px;
 }
 
 .login-email{
@@ -208,10 +125,13 @@ form p{
     border-bottom: 1px solid black;
     box-shadow: 0 0 15px 4px rgba(0,0,0,0,.6);
     border-radius: 10px;
-    width: 100%;
+    width: 60%;
     font-weight: 900;
     text-align: center;
+    font-size: 20px;
+    
 }
+
 .login-pass{
     padding: 10px;
     margin: 10px 0;
@@ -219,9 +139,17 @@ form p{
     border-bottom: 1px solid black;
     box-shadow: 0 0 15px 4px rgba(0,0,0,0,.6);
     border-radius: 10px;
-    width: 100%;
+    width: 60%;
     font-weight: 900;
     text-align: center;
+    font-size: 20px;
+}
+
+.signup-login-form label {
+    display: block;
+    margin: auto;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .login-signup-button{
@@ -235,15 +163,9 @@ form p{
     display: block;
     margin: auto;
     margin-left: 25%;
+    margin-bottom: 30px;
     font-weight: 900;
     background-color: white;
-}
-
-.login-signup-forms p{
-    text-align: center;
-    color: white;
-    font-weight: 600;
-    font-size: 20px;
 }
 
 .login-signup-button:hover{
@@ -257,6 +179,7 @@ form p{
     display: block;
     margin: auto;
     margin-left: 25%;
+    margin-bottom: 30px;
     font-weight: 900;
     background-color: grey;
 }
@@ -292,14 +215,14 @@ LOGIC FOR STYLING OUR FORMS FOR CREATING, UPDATING, and DELETEING A LIST
     height: 60px;
     font-weight: 900;
     font-size: 25px;
-    text-align: center;
-    display: block;
     display: block;
     text-align: center;
 
 }
 
 .create-list-form label{
+    display: block;
+    margin: auto;
     font-size: 25px;
     font-weight: 600;
 
@@ -307,6 +230,8 @@ LOGIC FOR STYLING OUR FORMS FOR CREATING, UPDATING, and DELETEING A LIST
 
 
 .create-task-form label{
+    display: block;
+    margin: auto;
     font-size: 25px;
     font-weight: 600;
 
@@ -434,7 +359,7 @@ p {
 	transform: translateY(-50%);
 	width: 20%;
 	height: 90%;
-	background-image: url(https://assets.codepen.io/4787486/pattern4.jpg);
+	background-image: url("../../static/ToDo/images/github.png");
 	background-size: cover;
 	border-radius: 0 5px 5px 0;
 	box-shadow: 3px 3px 10px 0 rgba(0 0 0 / 0.7);
@@ -520,3 +445,8 @@ BASIC STYLING OF SOME COMPONENTS ON MY WEBPAGE
     text-decoration: none;
     text-transform: uppercase;
 }
+
+
+/*
+ABOUT PAGE STYLING
+*/

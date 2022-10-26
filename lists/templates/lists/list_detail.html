@@ -2,17 +2,17 @@
 {% block content %}
 
 <div class='center-content'>
-    <h1>To-Do List: {{list.name}}</h1>
-    <h2>Uncompleted Tasks: </h2>
+    <h1>Your Current To-Do: {{list.name}}</h1>
+    <h2> </h2>
     {% for task in list.tasks.all %}
-        <h3>{{task.name}}{{tasks.created_at}}</h3>
+        <h3>{{task.name}}</h3>
         <a href="{% url 'tasks:delete-task' pk=task.pk %}"><input type="submit" value='Delete Item' class='delete-buttons'></a>
     {% empty %}
         <h4>Currently you have no tasks in this list! Add some below!</h4>
     {% endfor %}
     <hr>
     <h2>Add more tasks below! </h2>
-    <a href="{% url 'tasks:create-task'  %}"><input type="submit" value="Create Tasks" class='create-buttons'></a>
+    <a href="{% url 'tasks:create-task' %}"><input type="submit" value="Create Tasks" class='create-buttons'></a>
     
 </div>
 

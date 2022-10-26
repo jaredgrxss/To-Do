@@ -11,15 +11,14 @@ from . import forms
 
 
 class CreateTask(LoginRequiredMixin,generic.CreateView):
-    '''
-    fields = ('name','list')
-    model = Task
-    
-    '''
     form_class = forms.CreateNewTask
     template_name = 'tasks/create_task.html'
+    
+    def get_initial(self):
+        self.initial.update({'user':self.request.user})
+        return super().get_initial()    
 
-
+    
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.done = False

@@ -22,7 +22,7 @@
                 <ul>
                     {% if user.is_authenticated %}
                     <li><a href="{% url 'homepage' %}">Home</a></li>
-                    <li><a href="{% url 'lists:show-list' %}">My To-Do's</a></li>
+                    <li><a href="{% url 'lists:show-list' %}">My To-Dos</a></li>
                     <li><a href="{% url 'aboutpage'%}">About</a></li>
                     <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
                     {% else %}
