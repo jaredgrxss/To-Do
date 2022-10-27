@@ -3,7 +3,7 @@
 {% block content %}
 <div class='center-content'>
 <h1>Give your task a name!</h1>
-<form action="{% url 'tasks:create-task' %}" method="post" class='create-task-form"'>
+<form action="{% url 'tasks:create-task'%}" method="post" class='create-task-form"'>
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" value='Create Task!' class='create-buttons'>

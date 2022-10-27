@@ -14,5 +14,7 @@ class CreateNewTask(forms.ModelForm):
         tuser = kwargs['initial']['user']
         super(CreateNewTask,self).__init__(*args,**kwargs)
         self.fields['list'].queryset = list_models.List.objects.filter(user=tuser)
+        
+
 
             
