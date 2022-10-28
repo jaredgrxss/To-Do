@@ -88,9 +88,6 @@ FOOTER
 }
 
 
-/*
-Basic logic for styling our login/signup forms
-*/
 .login-signup-forms{
     left: 50%;
     top: 45%;
@@ -179,9 +176,7 @@ Basic logic for styling our login/signup forms
     background-color: grey;
 }
 
-/*
-LOGIC FOR STYLING OUR FORMS FOR CREATING, UPDATING, and DELETEING A LIST
-*/
+
 .create-list-name{
     padding: 10px;
     margin-top: 20px;
@@ -255,10 +250,6 @@ LOGIC FOR STYLING OUR FORMS FOR CREATING, UPDATING, and DELETEING A LIST
 
 
 
-
-/*
-Trying out effects for index page
-*/
 .text_container {
     width: 100%;
     height: 80vh;
@@ -367,9 +358,7 @@ p {
 }
 
 
-/*
-BASIC STYLING OF SOME COMPONENTS ON MY WEBPAGE
-*/
+
 .center-content{
     margin: auto;
     margin-bottom: 20px;
@@ -436,6 +425,4 @@ BASIC STYLING OF SOME COMPONENTS ON MY WEBPAGE
 }
 
 
-/*
-ABOUT PAGE STYLING
-*/
+
