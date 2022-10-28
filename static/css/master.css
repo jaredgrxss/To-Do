@@ -4,18 +4,14 @@ body{
     font-family: sans-serif;
 }
 
-/*
-If container is ever needed
-*/
+
 .container {
     width: 80%;
     margin: 0 auto;
 }
 
 
-/*
-NAV BAR OF THE PAGE
-*/
+
 
 
 nav ul {
@@ -63,9 +59,7 @@ nav a:hover::before{
     width: 100%;
 }
 
-/*
-FOOTER
-*/
+
 .footer{
     position: fixed;
     bottom: 0;
