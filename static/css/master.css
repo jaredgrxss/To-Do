@@ -359,7 +359,6 @@ p {
 	transform: translateY(-50%);
 	width: 20%;
 	height: 90%;
-	background-image: url("../../static/ToDo/images/github.png");
 	background-size: cover;
 	border-radius: 0 5px 5px 0;
 	box-shadow: 3px 3px 10px 0 rgba(0 0 0 / 0.7);
