@@ -364,6 +364,7 @@ p {
 	box-shadow: 3px 3px 10px 0 rgba(0 0 0 / 0.7);
 	transition: all .4s ease-in-out .075s;
 }
+
 .toggled .image-holder {
 	right: 0;
 	height: 100%;
