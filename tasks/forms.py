@@ -1,5 +1,4 @@
 from django import forms
-from matplotlib import widgets 
 from . import models 
 from lists import models as list_models
 class CreateNewTask(forms.ModelForm):
